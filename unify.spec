@@ -6,6 +6,7 @@ Release:	3
 License:	distributable
 Group:		Development/Tools
 Source0:	http://www.web.us.uu.net/sw/dist/%{name}-%{version}.tar.gz
+# Source0-md5:	cbd2fb1920162314e304c98187049cbc
 Patch0:		%{name}-warnings.patch
 URL:		http://www.web.us.uu.net/sw/dist/
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)

@@ -1,15 +1,15 @@
 Summary:	Patch file format translator
 Name:		unify
 Version:	1.2
-Release:	2
-Copyright:	freely distributable
-Group:		Applications/Text
-Group(de):	Applikationen/Text
-Group(fr):	Utilitaires/Texte
-Group(pl):	Aplikacje/Tekst
-URL:		http://www.web.us.uu.net/sw/dist/
+Release:	3
+License:	Distributable
+Group:		Development/Tools
+Group(de):	Entwicklung/Werkzeuge
+Group(fr):	Development/Outils
+Group(pl):	Programowanie/Narzêdzia
 Source0:	http://www.web.us.uu.net/sw/dist/%{name}-%{version}.tar.gz
 Patch0:		%{name}-warnings.patch
+URL:		http://www.web.us.uu.net/sw/dist/
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description

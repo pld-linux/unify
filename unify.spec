@@ -1,4 +1,5 @@
 Summary:	Patch file format translator
+Summary(pl):	Narzêdzie t³umacz±ce formaty ³at
 Name:		unify
 Version:	1.2
 Release:	3
@@ -19,6 +20,11 @@ is a supplement to diffutils and patch.
 Install unify if you find one patch format easier to read than the
 other, for example if you want to read patch ".rej" files in unified
 format.
+
+%description -l pl
+unify t³umaczy kontekstowy diff na unified lub odwrotnie. Jest
+dodatkiem do pakietów diffutils i patch. Przydaje siê np. gdy chcemy
+przeczytaæ pliki .rej w formacie unified.
 
 %prep
 %setup -q

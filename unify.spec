@@ -2,7 +2,7 @@ Summary:	Patch file format translator
 Name:		unify
 Version:	1.2
 Release:	3
-License:	Distributable
+License:	distributable
 Group:		Development/Tools
 Group(de):	Entwicklung/Werkzeuge
 Group(fr):	Development/Outils

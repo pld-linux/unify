@@ -3,27 +3,29 @@ Name:		unify
 Version:	1.2
 Release:	2
 Copyright:	freely distributable
-Group:		Utilities/Text
+Group:		Applications/Text
+Group(de):	Applikationen/Text
 Group(fr):	Utilitaires/Texte
-Group(pl):	Narzêdzia/Tekst
+Group(pl):	Aplikacje/Tekst
 URL:		http://www.web.us.uu.net/sw/dist/
 Source0:	http://www.web.us.uu.net/sw/dist/%{name}-%{version}.tar.gz
-Patch0:		unify-warnings.patch
+Patch0:		%{name}-warnings.patch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
-unify translates a context diff into a unified diff, or vice-versa. It is a
-supplement to diffutils and patch.
+unify translates a context diff into a unified diff, or vice-versa. It
+is a supplement to diffutils and patch.
 
-Install unify if you find one patch format easier to read than the other,
-for example if you want to read patch ".rej" files in unified format.
+Install unify if you find one patch format easier to read than the
+other, for example if you want to read patch ".rej" files in unified
+format.
 
 %prep
-%setup 	-q
+%setup -q
 %patch0 -p0
 
 %build
-gcc -Wall unify.c -o unify $RPM_OPT_FLAGS
+%{__cc} %{rpmcflags} %{rpmldflags} -Wall unify.c -o unify
 
 %install
 rm -rf $RPM_BUILD_ROOT
@@ -31,8 +33,6 @@ install -d $RPM_BUILD_ROOT{%{_bindir},%{_mandir}/man1}
 
 install unify $RPM_BUILD_ROOT%{_bindir}
 install unify.1 $RPM_BUILD_ROOT%{_mandir}/man1
-
-gzip -9nf $RPM_BUILD_ROOT%{_mandir}/man*/*
 
 %clean
 rm -rf $RPM_BUILD_ROOT

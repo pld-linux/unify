@@ -2,7 +2,7 @@ Summary:	Patch file format translator
 Summary(pl):	Narzêdzie t³umacz±ce formaty ³at
 Name:		unify
 Version:	1.2
-Release:	3
+Release:	4
 License:	distributable
 Group:		Development/Tools
 Source0:	http://www.web.us.uu.net/sw/dist/%{name}-%{version}.tar.gz

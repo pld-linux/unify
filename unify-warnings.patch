@@ -1,0 +1,40 @@
+Index: unify.c
+===================================================================
+--- unify.c	1997/09/06 06:05:22	1.1
++++ unify.c	2000/03/28 23:50:27	1.2
+@@ -7,9 +7,9 @@
+ */
+ 
+ #include <stdio.h>
++#include <stdlib.h>
++#include <string.h>
+ 
+-extern char *malloc();
+-
+ #define FIND_NEXT	0
+ #define PARSE_UNIDIFF	1
+ #define UNI_LINES	2
+@@ -90,7 +90,7 @@
+ 	    }
+ 	} else {
+ 	    if (fp_in != stdin) {
+-		fprintf(stderr, "Only one filename allowed.\n", *argv);
++		fprintf(stderr, "Only one filename allowed.\n");
+ 		exit(1);
+ 	    }
+ 	    if ((fp_in = fopen(*argv, "r")) == NULL) {
+@@ -144,10 +144,10 @@
+ 		    }
+ 		}
+ 		if (!patch_format) {
+-		    if (output_type == 1 && (*buf == '+'
+-		      || *buf == '-' && star_dash_plus != '*')
+-		     || output_type == 2 && (*buf == '*'
+-		      || *buf == '-' && star_dash_plus == '*')) {
++		    if ((output_type == 1 &&
++			 (*buf == '+' || (*buf == '-' && star_dash_plus != '*')))
++			|| (output_type == 2 &&
++			    (*buf == '*' || (*buf == '-' && star_dash_plus == '*')))) {
+ 			printf("%s", buf);
+ 		    } else if (*buf == '*' || *buf == '+') {
+ 			printf("---%s", buf+3);

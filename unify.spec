@@ -3,7 +3,9 @@ Name:		unify
 Version:	1.2
 Release:	2
 Copyright:	freely distributable
-Group:		Applications/Text
+Group:		Utilities/Text
+Group(fr):	Utilitaires/Texte
+Group(pl):	Narzêdzia/Tekst
 URL:		http://www.web.us.uu.net/sw/dist/
 Source0:	http://www.web.us.uu.net/sw/dist/%{name}-%{version}.tar.gz
 Patch0:		unify-warnings.patch
@@ -27,8 +29,8 @@ gcc -Wall unify.c -o unify $RPM_OPT_FLAGS
 rm -rf $RPM_BUILD_ROOT
 install -d $RPM_BUILD_ROOT{%{_bindir},%{_mandir}/man1}
 
-install -m755 unify 	$RPM_BUILD_ROOT%{_bindir}/unify
-install unify.1 	$RPM_BUILD_ROOT%{_mandir}/man1/unify.1
+install unify $RPM_BUILD_ROOT%{_bindir}
+install unify.1 $RPM_BUILD_ROOT%{_mandir}/man1
 
 gzip -9nf $RPM_BUILD_ROOT%{_mandir}/man*/*
 
@@ -37,5 +39,5 @@ rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%attr(755,root,root) %{_bindir}/unify
-%{_mandir}/man1/unify.1*
+%attr(755,root,root) %{_bindir}/*
+%{_mandir}/man1/*

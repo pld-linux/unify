@@ -5,9 +5,6 @@ Version:	1.2
 Release:	3
 License:	distributable
 Group:		Development/Tools
-Group(de):	Entwicklung/Werkzeuge
-Group(fr):	Development/Outils
-Group(pl):	Programowanie/Narzêdzia
 Source0:	http://www.web.us.uu.net/sw/dist/%{name}-%{version}.tar.gz
 Patch0:		%{name}-warnings.patch
 URL:		http://www.web.us.uu.net/sw/dist/

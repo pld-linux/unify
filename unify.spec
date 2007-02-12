@@ -1,5 +1,5 @@
 Summary:	Patch file format translator
-Summary(pl.UTF-8):   Narzędzie tłumaczące formaty łat
+Summary(pl.UTF-8):	Narzędzie tłumaczące formaty łat
 Name:		unify
 Version:	1.2
 Release:	4

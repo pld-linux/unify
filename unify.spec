@@ -26,7 +26,7 @@ przeczytać pliki .rej w formacie unified.
 
 %prep
 %setup -q
-%patch0 -p0
+%patch -P0 -p0
 
 %build
 %{__cc} %{rpmcflags} %{rpmldflags} -Wall unify.c -o unify
